@@ -7,7 +7,7 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: read  #required to read repository-projects
   packages: write   # REQUIRED to publish to GitHub Packages
 
 jobs:
