@@ -28,12 +28,24 @@ jobs:
       - name: Publish- Create a NuGet Package
         run: dotnet publish --output ./nupkg1
 
-      - name: Collect artifact
+      - name: Collect/upload artifact
         uses: actions/upload-artifact@v6.0.0
         with:
             name: nuget-package
             path: ./nupkg
       
+  deploy:
+    runs-on: windows-latest
+    needs: build
+
+    steps:
+
+      - name: Download artifact
+        uses: actions/download-artifact@v7.0.0
+        with:
+            name: nuget-package
+            path: ./nupkg
+
       - name: Azure Login
         uses: Azure/login@v2.3.0
         with:
