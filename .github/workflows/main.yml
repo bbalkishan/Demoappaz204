@@ -32,5 +32,5 @@ jobs:
       - name: List all files
         run: ls -al
 
-      - name: Publish Package to GitHub Packages
+      - name: Publish Package to GitHub Packages demo
         run: dotnet nuget push "./nupkg/*.nupkg" --source "https://nuget.pkg.github.com/ibnehussain/index.json" --api-key ${{secrets.GITHUB_TOKEN}}
