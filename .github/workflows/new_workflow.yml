@@ -2,6 +2,7 @@ name: Hello world
 on: push
 jobs:
   test:
-  -runs on :ubuntu-latest
+    runs-on :ubuntu-latest
    steps:
     -run: echo "hello world"
+    -run: ls -la
