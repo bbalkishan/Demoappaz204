@@ -8,12 +8,12 @@ jobs:
         run: echo "hello world"
 #Directly run a command
        -name: list all files in the directory
-       directory
+       directory:
         run: ls -la
        -name: checkout code
        uses: actions/checout@v6.0.2
        -name: list all files in the directory
-       repository
+       repository:
        run: ls -al
 
 
