@@ -5,16 +5,16 @@ jobs:
    test:
      steps:
        -name: Runa a one line script 
-        run: echo "hello world"
+          run: echo "hello world"
 #Directly run a command
        -name: list all files in the directory
-       directory:
-        run: ls -la
+         directory:
+           run: ls -la
        -name: checkout code
-       uses: actions/checout@v6.0.2
+          uses: actions/checout@v6.0.2
        -name: list all files in the directory
-       repository:
-       run: ls -al
+        repository:
+          run: ls -al
 
 
 
